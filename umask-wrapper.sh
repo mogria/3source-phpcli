@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # ensure all files created have write permissions for the group too.
 # all docker containers used for this project use the www-data user.
