@@ -17,6 +17,7 @@ RUN apk add --update \
     php-mysql \
     php-openssl \
     php-pdo \
+    php-pdo_mysql \
     php-phar
 
 VOLUME ["/data"]
