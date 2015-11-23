@@ -2,8 +2,7 @@ FROM alpine:latest
 
 MAINTAINER "Mogria <m0gr14@gmail.com>"
 
-RUN mkdir /data
-RUN adduser -h /data/www -D -S -G www-data www-data
+RUN adduser -h /var/www -D -S -G www-data www-data
 
 COPY umask-wrapper.sh /usr/bin/umask-wrapper.sh
 RUN chmod +x /usr/bin/umask-wrapper.sh
@@ -20,10 +19,8 @@ RUN apk add --update \
     php-pdo_mysql \
     php-phar
 
-VOLUME ["/data"]
-
 USER www-data
-WORKDIR /data/www
+WORKDIR /tmp
 ENTRYPOINT ["umask-wrapper.sh", "php"]
 CMD ["--help"]
     
