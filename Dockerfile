@@ -2,7 +2,11 @@ FROM alpine:latest
 
 MAINTAINER "Mogria <m0gr14@gmail.com>"
 
-RUN adduser -h /var/www -D -H -S -G www-data www-data
+RUN mkdir -p /data/www
+VOLUME ["/data"]
+WORKDIR /data/www
+
+RUN adduser -h /data/www -D -H -S -G www-data www-data
 
 COPY umask-wrapper.sh /usr/bin/umask-wrapper.sh
 RUN chmod +x /usr/bin/umask-wrapper.sh
