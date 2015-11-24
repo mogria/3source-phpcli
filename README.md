@@ -1,10 +1,16 @@
 # 3source-phpcli
 
-This docker image runs the php-cli inside the `/data` volume.
+This docker image installs `php-cli` and all required php extensions
+and provides the `php` command line tool.
+
+This image uses the following image as it's base image:
+
+ * [3source-base](https://github.com/mogria/3source-base)
 
 This is also the base image for some of my docker images:
 
-    * [docker-laravel-artisan](https://github.com/mogria/3source-artisan)
+ * [3source-artisan](https://github.com/mogria/3source-artisan)
+ * [3source-composer](https://github.com/mogria/3source-composer)
 
 This image is heavily inspired from [dylanlindgren/docker-laravel-phpcli](https://github.com/dylanlindgren/docker-laravel-phpcli).
 
