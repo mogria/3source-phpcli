@@ -4,6 +4,7 @@ MAINTAINER "Mogria <m0gr14@gmail.com>"
 
 RUN apk add --update \
     php-cli \
+    php-ctype \
     php-dom \
     php-gd \
     php-json \
